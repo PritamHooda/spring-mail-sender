@@ -29,5 +29,8 @@ In real world application, it be likely better to have the email functionality a
 
 ### Usage
 
-1. 
+1. TODO
+
+## Contact
+For any questions or feedback, please contact Pritam Hooda (me). I can be reached at pritamhooda@outlook.com
 
