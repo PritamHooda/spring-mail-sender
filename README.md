@@ -29,7 +29,13 @@ In real world application, it be likely better to have the email functionality a
 
 ### Usage
 
-1. TODO
+Since this project is just a POC there is no direct usage, its ment to showcase and test the mail sending funcion of the spring framework. you can see the code function by building the project and executing the unit tests.
+* The idea is that this code would be packaged as a JAR that is then used as a dependency by webservices, APIs, etc.
+* Or the class could be part of these services/APIs; packaged together.
+Depends on perspective, whether you are more of a "microservice guy" or a "monolith guy".
+
+## Future
+This project can be modified to be a service
 
 ## Contact
 For any questions or feedback, please contact Pritam Hooda (me). I can be reached at pritamhooda@outlook.com
