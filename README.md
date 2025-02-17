@@ -14,12 +14,13 @@ In real world application, it be likely better to have the email functionality a
 ## Technologies Used
 
 - **Java 21**
-- **Spring Boot 3.3.0**
+- **Spring Boot v3.3.0**
 - **Spring Mail**
 - **Log4j2**
 - **Lombok**
-- **GreenMail** (for testing)
+- **GreenMail v2.0.1** (for testing)
 - **Maven** (for dependency management and build)
+
 
 
 ### Prerequisites
@@ -29,13 +30,16 @@ In real world application, it be likely better to have the email functionality a
 
 ### Usage
 
-Since this project is just a POC there is no direct usage, its ment to showcase and test the mail sending funcion of the spring framework. you can see the code function by building the project and executing the unit tests.
-* The idea is that this code would be packaged as a JAR that is then used as a dependency by webservices, APIs, etc.
-* Or the class could be part of these services/APIs; packaged together.
-Depends on perspective, whether you are more of a "microservice guy" or a "monolith guy".
+This project serves as a proof of concept and does not have direct usage. Instead, it is designed to showcase and test the mail-sending functionality of the Spring framework. You can explore the code by building the project and executing the unit tests.
 
-## Future
-This project can be modified to be a service
+* The intention is to package this code as a JAR, which can then be used as a dependency by web services, APIs, and similar applications.
+* Alternatively, the classes can be integrated directly into these services/APIs and packaged together.
+
+The approach depends on your perspective, whether you prefer a "microservices" architecture or a "monolithic" structure.
+
+<!-- TODO future section - but I dont remember what I was going to add here -->
+<!-- ## Future -->
+<!-- This project can be modified to be a service -->
 
 ## Contact
 For any questions or feedback, please contact Pritam Hooda (me). I can be reached at pritamhooda@outlook.com
