@@ -4,9 +4,11 @@ import jakarta.annotation.Nullable;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
+import lombok.NonNull;
 import lombok.extern.log4j.Log4j2;
 
 import java.io.File;
+import java.util.Arrays;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,11 +26,21 @@ public class EmailSender {
 
 	private final String UTF_8 = "UTF-8";
 
-	public void sendMimeMessage(InternetAddress[] to, InternetAddress from, String subject, String body, 
+	public void sendMimeMessage(@NonNull InternetAddress[] to, @NonNull InternetAddress from, String subject, String body, 
 								boolean isBodyHtml, @Nullable File[] attachments, @Nullable Map<String,File> imgs) throws MessagingException{
 		log.info("Sending Mime message...");
 		MimeMessage message = mailSender.createMimeMessage();
 		MimeMessageHelper messageHelper = new MimeMessageHelper(message, true, UTF_8);
+
+		//Debug values
+		log.debug("""
+			Message values:
+			Sender's Address: {}
+			Receiver's addresses: {}
+			Email Subject: {}
+			Is the body null or empty? : {}
+			Is the body HTML? : {}  
+		""", from, Arrays.toString(to), subject, (body == null || body.isEmpty() ), isBodyHtml);
 
 		messageHelper.setTo(to);
 		messageHelper.setFrom(from);
